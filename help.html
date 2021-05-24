@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="thesimg" />
+
+    <title>Help</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <a
+        onclick="document.getElementById('thumbnail').scrollIntoView({ behavior: 'smooth'});"
+      >
+        <div class="textGrad">What's Love?</div>
+      </a>
+      <div id="header-right" class="textGrad">
+        <div id="textGrad">
+          <a
+            class="textGrad"
+            onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth'});"
+            href="/index.html"
+            >Home</a
+          >
+          <a
+            class="textGrad"
+            onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth'});"
+            href="/quiz.html"
+            >Quiz</a
+          >
+          <a
+            class="textGrad"
+            onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth'});"
+            href="/stories.html"
+            >Stories</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="bodyTextFull">
+      <div class="textGrad bodyTitle">Resources</div>
+
+      <div class="textGrad bodySubtitle">
+        Please seek assistance if you or someone you know is in an abusive
+        relationship
+      </div>
+      <div class="centeredText">
+        <h1>
+          <a href="https://www.thehotline.org/" class="blankLink"
+            >National Domestic Violence Hotline</a
+          >
+        </h1>
+        Text "START" to 1.800.799.SAFE (7233) or Call 1.800.799.SAFE (7233) for
+        a safe, private, and easy conversation.
+        <br /><br />
+        "24 hours a day, seven days a week, 365 days a year, the National
+        Domestic Violence Hotline provides essential tools and support to help
+        survivors of domestic violence so they can live their lives free of
+        abuse."<br /><br />
+        "Contacts to The Hotline can expect highly-trained, expert advocates to
+        offer free, confidential, and compassionate support, crisis intervention
+        information, education, and referral services in over 200 languages."
+
+        <br /><br />
+        <h1>
+          <a href="https://joinonelove.org" class="blankLink">One Love</a>
+        </h1>
+        "One Love educates young people about healthy and unhealthy
+        relationships, empowering them to identify and avoid abuse and learn how
+        to love better."
+        <br /><br />
+        <h1>
+          <a href="https://victimsofcrime.org/" class="blankLink"
+            >Victims of Crime</a
+          >
+        </h1>
+        "The mission of the National Center for Victims of Crime is to forge a
+        national commitment to help victims of crime rebuild their lives. We are
+        dedicated to serving individuals, families, and communities harmed by
+        crime."
+        <br /><br />
+        <h1>
+          <a href="https://www.loveisrespect.org/" class="blankLink"
+            >love is respect</a
+          >
+        </h1>
+        "love is respect is the national resource to disrupt and prevent
+        unhealthy relationships and intimate partner violence by empowering
+        young people through inclusive and equitable education, support, and
+        resources. "
+        <br /><br />
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("header").style.top = "0";
+    </script>
+    <script>
+      let $root = $("html, body");
+      $('a[href^="#"]').click(function() {
+        let href = $.attr(this, "href");
+        $root.animate(
+          {
+            scrollTop: $(href).offset().top
+          },
+          500,
+          function() {
+            window.location.hash = href;
+          }
+        );
+        return false;
+      });
+    </script>
+  </body>
+</html>
