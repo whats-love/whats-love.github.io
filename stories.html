@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="thesimg" />
+
+    <title>Survivor Stories</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <a
+        onclick="document.getElementById('thumbnail').scrollIntoView({ behavior: 'smooth'});"
+      >
+        <div class="textGrad">What's Love?</div>
+      </a>
+      <div id="header-right" class="textGrad">
+        <div id="textGrad">
+          <a
+            class="textGrad"
+            onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth'});"
+            href="/index.html"
+            >Home</a
+          >
+          <a
+            class="textGrad"
+            onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth'});"
+            href="/quiz.html"
+            >Quiz</a
+          >
+          <a
+            class="textGrad"
+            onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth'});"
+            href="/help.html"
+            >Help</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="bodyTextFull">
+      <div class="textGrad bodyTitle">Survival Stories</div>
+      <div class="centeredText">
+        <h1>
+          <a href="https://www.bbc.com/news/stories-51360772" class="blankLink"
+            >"I didn't know it was abuse until I nearly died"</a
+          >
+        </h1>
+        The story of Abi Blake and her abusive husband - BBC
+        <br /><br />
+
+        <h1>
+          <a
+            href="https://www.theguardian.com/society/ng-interactive/2015/jun/02/domestic-violence-five-women-tell-their-stories-of-leaving-the-most-dangerous-time"
+            class="blankLink"
+            >Five Stories of Abuse</a
+          >
+        </h1>
+        Five stories of abusive relationships the departure from them - The
+        Guardian
+        <br /><br />
+
+        <h1>
+          <a
+            href="https://safelives.org.uk/news-views/real-life-stories"
+            class="blankLink"
+            >A Collection of Survival Stories</a
+          >
+        </h1>
+        A collection of survival stories from a variety of viewpoints and
+        positions - SafeLives
+        <br /><br />
+      </div>
+    </div>
+    <script>
+      document.getElementById("header").style.top = "0";
+    </script>
+    <script>
+      let $root = $("html, body");
+      $('a[href^="#"]').click(function() {
+        let href = $.attr(this, "href");
+        $root.animate(
+          {
+            scrollTop: $(href).offset().top
+          },
+          500,
+          function() {
+            window.location.hash = href;
+          }
+        );
+        return false;
+      });
+    </script>
+  </body>
+</html>

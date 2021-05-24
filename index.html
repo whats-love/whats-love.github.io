@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="thesimg" />
+
+    <title>What's Love?</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <a
+        onclick="document.getElementById('thumbnail').scrollIntoView({ behavior: 'smooth'});"
+      >
+        <div class="textGrad">What's Love?</div>
+      </a>
+      <div id="header-right" class="textGrad">
+        <div id="textGrad">
+          <a
+            class="textGrad"
+            onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth'});"
+            href="/quiz.html"
+            >Quiz</a
+          >
+          <a
+            class="textGrad"
+            onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth'});"
+            href="/help.html"
+            >Help</a
+          >
+          <a
+            class="textGrad"
+            onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth'});"
+            href="/stories.html"
+            >Stories</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="thumbnail">
+      <div id="thumbBackGreen"></div>
+      <div id="thumbText" class="textGrad">What's Love?</div>
+      <div id="thumbSubText" class="textGrad">
+        Healthy and Unhealthy Relationships
+      </div>
+      <div class="fade"></div>
+      <div id="scrollDown" class="scrollButton">
+        <a
+          onclick="document.getElementById('bodyText').scrollIntoView({ behavior: 'smooth'});"
+          ><span></span>See More</a
+        >
+      </div>
+    </div>
+
+    <div id="bodyText">
+      <div id="about">
+        <br />
+        <div class="textGrad bodyTitle">Characteristics</div>
+
+        <div class="centeredText">
+          <div class="textGrad bodySubtitle">That's Love</div>
+
+          <strong>Comfortable Pace</strong><br />The relationship moves at a
+          speed that feels enjoyable for each person.<br /><br />
+          <strong>Honesty</strong><br />You can be truthful and candid without
+          fearing how the other person will respond<br /><br />
+          <strong>Respect</strong><br />You value one another’s beliefs and
+          opinions, and love one another for who you are as a person<br /><br />
+          <strong>Kindness</strong><br />You are caring and empathetic to one
+          another, and provide comfort and support<br /><br />
+          <strong>Healthy Conflict</strong><br />Openly and respectfully
+          discussing issues and confronting disagreements non-judgmentally<br /><br />
+          <strong>Trust</strong><br />Confidence that your partner won’t do
+          anything to hurt you or ruin the relationship<br /><br />
+          <strong>Independence</strong><br />You have space to be yourself
+          outside of the relationship<br /><br />
+          <strong>Equality</strong><br />The relationship feels balanced and
+          everyone puts the same effort into the success of the relationship<br /><br />
+          <strong>Taking Responsibility</strong><br />Owning your own actions
+          and words<br /><br />
+          <strong>Fun</strong><br />You enjoy spending time together and bring
+          out the best in each other<br /><br />
+
+          <div class="textGrad bodySubtitle">
+            That's <strong>Not</strong> Love
+          </div>
+          <strong>Intensity</strong><br />When someone expresses very extreme
+          feelings and over-the top behavior that feels overwhelming<br /><br />
+          <strong>Possessiveness</strong><br />When someone is jealous to a
+          point where they try to control who you spend time with and what you
+          do<br /><br />
+          <strong>Manipulation</strong><br />When someone tries to control your
+          decisions, actions or emotions<br /><br />
+          <strong>Isolation</strong><br />When someone keeps you away from
+          friends, family, or other people<br /><br />
+          <strong>Sabotage</strong><br />When someone purposely ruins your
+          reputation, achievements, or success<br /><br />
+          <strong>Belittling</strong><br />When someone does and says things to
+          make you feel bad about yourself<br /><br />
+          <strong>Guilting</strong><br />When someone makes you feel responsible
+          for their actions or makes you feel like it’s your job to keep them
+          happy<br /><br />
+          <strong>Volatility</strong><br />When someone has a really strong,
+          unpredictable reaction that makes you feel scared, confused or
+          intimidated<br /><br />
+          <strong>Deflecting Responsibility</strong><br />When someone
+          repeatedly makes excuses for their unhealthy behavior<br /><br />
+          <strong>Betrayal</strong><br />When someone is disloyal or acts in an
+          intentionally dishonest way<br /><br />
+          <a href="/quiz.html"
+            ><div class="textGrad bodySubtitle" style="font-style: italic;">
+              Try the quiz
+            </div></a
+          >
+          <p>adapted from <a href="https://www.joinonelove.org">one love</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 350 ||
+          document.documentElement.scrollTop > 350
+        ) {
+          document.getElementById("header").style.top = "0";
+        } else {
+          document.getElementById("header").style.top = "-50px";
+        }
+      }
+    </script>
+    <script>
+      let $root = $("html, body");
+      $('a[href^="#"]').click(function() {
+        let href = $.attr(this, "href");
+        $root.animate(
+          {
+            scrollTop: $(href).offset().top
+          },
+          500,
+          function() {
+            window.location.hash = href;
+          }
+        );
+        return false;
+      });
+    </script>
+  </body>
+</html>
