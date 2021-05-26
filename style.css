@@ -259,7 +259,8 @@ body {
   color: transparent;
 }
 
-#QA {
+#QA,
+#QAafter {
   font: normal normal 16px/1 Arial;
   position: relative;
   margin: 0 auto;
@@ -270,7 +271,7 @@ body {
   padding: 20px;
   color: black;
 }
-#QA h2 {
+#QA h2, #QAafter h2 {
   font-weight: 200;
   font-family: "Source Code Pro", monospace;
   font-size: 20px;
@@ -287,6 +288,7 @@ body {
 }
 #aDIV,
 #score,
-#response {
+#response,
+#QAafter {
   display: none;
 }
